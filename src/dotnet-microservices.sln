@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Cat
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E58C302A-D5FF-4DBE-868C-8305BEF1D30E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{3CEBBC96-EF68-4291-8F5D-011209457CF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{81CDC158-7C2C-4E82-823C-2FA06D30D8C9} = {56DE35DE-F687-427D-A5AD-155890AA6FEF}
 		{41ADD97D-25E0-4EE6-8F3E-413A069735A9} = {81CDC158-7C2C-4E82-823C-2FA06D30D8C9}
+		{3CEBBC96-EF68-4291-8F5D-011209457CF7} = {56DE35DE-F687-427D-A5AD-155890AA6FEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BD38CB46-A6D7-434D-8F62-6EB86D4D7969}
