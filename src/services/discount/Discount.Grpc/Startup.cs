@@ -1,4 +1,5 @@
 ﻿using Discount.Grpc.Repositories;
+using Discount.Grpc.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +19,9 @@ namespace Discount.Grpc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDiscountRepository, DiscountRepository>();
+            // we are doing like this beacuse we have adding AutoMapper.Extensions.Microsoft.DependencyInjection 
+            // check this in csproj file
+            services.AddAutoMapper(typeof(Startup));
             services.AddGrpc();
         }
 
@@ -34,6 +38,7 @@ namespace Discount.Grpc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<DiscountService>();
 
                 endpoints.MapGet("/", async context =>
                 {
